@@ -84,7 +84,8 @@ console.log(calculateTip(20,0.25))
 let total = prompt('How much is the Total?');
 let percentage = prompt('how much would you like to tip');
 let userInput =  parseFloat(percentage);
-let tipAmount = alert(`you should tip ${percentage}`);
+let tipPercentage = total * (percentage * 0.01)
+let tipAmount = alert(`you should tip ${tipPercentage}`);
 
 /**
  * TODO:
