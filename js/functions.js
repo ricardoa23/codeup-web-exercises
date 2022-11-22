@@ -14,7 +14,7 @@ function sayHello(name){
 
 }
 
-console.log(sayHello('Ricardo'))
+console.log(sayHello('Ricardo'));
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -23,7 +23,7 @@ console.log(sayHello('Ricardo'))
  * console.log 'helloMessage' to check your work
  */
 let helloMessage = sayHello('Ricardo');
-console.log(helloMessage)
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -32,7 +32,7 @@ console.log(helloMessage)
  */
 let myName = 'Ricardo';
 
-console.log(sayHello(myName))
+console.log(sayHello(myName));
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -58,7 +58,7 @@ function isTwo(num){
   return num === 2;
 }
 
-console.log(isTwo(random))
+console.log(isTwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -74,7 +74,7 @@ function calculateTip(num, tip){
     return num * tip;
 }
 
-console.log(calculateTip(20,0.25))
+console.log(calculateTip(20,0.25));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -83,9 +83,11 @@ console.log(calculateTip(20,0.25))
  */
 let total = prompt('How much is the Total?');
 let percentage = prompt('how much would you like to tip');
-let userInput =  parseFloat(percentage);
-let tipPercentage = total * (percentage * 0.01)
-let tipAmount = alert(`you should tip ${tipPercentage}`);
+
+let tipTotal = calculateTip(total, parseFloat('0.' + percentage))
+
+alert(tipTotal)
+
 
 /**
  * TODO:
