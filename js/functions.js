@@ -9,10 +9,14 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(name){
+function sayHello(name) {
     return `Hello ${name}`;
-
 }
+// const sayHello2 = (name) => {
+//     return `Hello ${name}`;
+    }
+
+
 
 console.log(sayHello('Ricardo'));
 /**
@@ -70,25 +74,23 @@ console.log(isTwo(random));
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(num, tip){
-    return num * tip;
+function calculateTip(bill, tip){
+    let formattedTip = tip / 100;
+    let answer = parseFloat((formattedTip * bill).toFixed(2));
+    return answer;
 }
 
-console.log(calculateTip(20,0.25));
+console.log(calculateTip(20,25));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-let total = prompt('How much is the Total?');
-let percentage = prompt('how much would you like to tip');
-
-let tipTotal = calculateTip(total, parseFloat('0.' + percentage))
-
-alert(tipTotal)
-
-
+let total = prompt('Total amount $');
+let tip = prompt('How much would you like to tip');
+let tipTotal = calculateTip(total, tip);
+alert(`You should tip a total of $${tipTotal.toFixed(2)}`);
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -103,9 +105,9 @@ alert(tipTotal)
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+let newTotal = applyDiscount(20.21, 25);
+console.log(newTotal.toFixed(2));
 
 function applyDiscount(price, discount){
-    let discountedTotal = price - (price * discount);
-    return discountedTotal;
+    return parseFloat(price) - (parseFloat(price) * (discount / 100));
 }
-console.log(applyDiscount(20, 0.5));
