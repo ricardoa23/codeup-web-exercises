@@ -10,11 +10,11 @@
  */
 
 function sayHello(name) {
-    return `Hello ${name}`;
+    return `Hello ${name}!`;
 }
 // const sayHello2 = (name) => {
 //     return `Hello ${name}`;
-    }
+// }
 
 
 
