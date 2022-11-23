@@ -25,13 +25,13 @@
 let testColor = 'red'
 console.log(analyzeColor(testColor.toLowerCase()))
 
-function analyzeColor(color) {
-    if (color == 'red') {
-        return `I like the color ${color} too!`
-    } else if (color == 'blue') {
-        return `${color} is another color I like!`
+function analyzeColor(string) {
+    if (string == 'red') {
+        return `I like the color ${string} too!`;
+    } else if (string == 'blue') {
+        return `${string} is another color I like!`;
     } else {
-        return `I don't know what ${color} is. :(`
+        return `I don't know what ${string} is. :(`;
     }
 }
 
@@ -48,10 +48,40 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+// console.log(analyzeColor(randomColor.toLowerCase()))
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+//Ask why it didn't work with analyzeColor(randomColor.toLowerCase())
+
+switch (randomColor){
+    case 'green':
+        console.log(`${randomColor} eggs and ham was one of the first books I read`);
+        break;
+    case 'red':
+        console.log(`${randomColor} is a color that some sports cars look good in.`);
+        break;
+    case 'blue':
+        console.log(`${randomColor} is the color of the ocean and sky`);
+        break;
+    case 'orange':
+        console.log(`${randomColor} is my favorite color`);
+        break;
+    case 'yellow':
+        console.log(`black and ${randomColor} reversed was a popular song`);
+        break;
+    case 'violet':
+        console.log(`the new pokemon game ${randomColor}`);
+        break;
+    case 'indigo':
+        console.log(`${randomColor} bunting is a small spieces of bird`);
+        break;
+    default:
+        console.log(`I don't know what to really say about ${randomColor}`);
+        break;
+}
 
 /**
  * TODO:
@@ -59,7 +89,21 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+// let userInput = prompt("What's your favorite color?");
+// switch (userInput.toLowerCase()) {
+//     case 'red':
+//         alert(`Not all fire engines are ${userInput.toLowerCase()}`);
+//         break;
+//     case 'blue':
+//         alert(`the best shade of ${userInput.toLowerCase()} is Dodgerblue`);
+//         break;
+//     case 'orange':
+//         alert(`${userInput.toLowerCase()} is my favorite color`);
+//         break;
+//     default:
+//         alert(`${userInput.toLowerCase()} is something I'm not sure what to say about`);
+//         break;
+// }
 /* ########################################################################## */
 
 /**
@@ -81,7 +125,29 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
+let luckyNumber = Math.floor((Math.random() * 5) + 1)
+function calculateTotal(price) {
+    switch (luckyNumber) {
+        case 0:
+            return priceBeforeDiscount;
+            break;
+        case 1:
+            return price - (price * 0.1);
+            break;
+        case 2:
+            return price - (price * 0.25);
+            break;
+        case 3:
+            return price - (price * 0.35);
+            break;
+        case 4:
+            return  price - (price * 0.5);
+            break;
+        case 5:
+            return price * 0;
+            break;
+    }
+}
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
