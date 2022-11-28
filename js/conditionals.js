@@ -185,4 +185,29 @@ with the discount applied your new total is $${calculateTotal(userInput)}`);
  * HINT: The way we prompt for a value could be improved
  */
 
+let lastTodo = confirm('Would you like to enter a number?');
+if (lastTodo) {
+     let todoInput = prompt('Please enter your number below');
+     todoInput = parseInt(todoInput)
+     if (todoInput == NaN) {
+         alert("Please enter a number")
+     } else {
+
+     if (parseInt(todoInput) % 2 == 0) {
+         alert(`${todoInput} is even.`);
+         alert(`${todoInput} + 100 = ${parseInt(todoInput) + 100}`);
+     } else {
+         alert(`${`${todoInput} is odd.`}`);
+         alert(`${todoInput} + 100 = ${parseInt(todoInput) + 100}`);
+
+     }
+    if (todoInput > 0){
+        alert(`${todoInput} is positive `)
+    } else {
+        alert(`${todoInput} is negative`)
+    }
+    }
+} else {
+    alert('Okay but if you change your mind all you have to do is refresh the page.');
+}
 
