@@ -193,12 +193,12 @@ if (lastTodo) {
          alert("Please enter a number");
      } else {
 
-     if (todoInput % 2 == 0) {
+     if (todoInput % 2 === 0) {
          alert(`${todoInput} is even.`);
-         alert(`${todoInput} + 100 = ${parseInt(todoInput) + 100}`);
+         alert(`${todoInput} + 100 = ${ + 100}`);
      } else {
          alert(`${`${todoInput} is odd.`}`);
-         alert(`${todoInput} + 100 = ${parseInt(todoInput) + 100}`);
+         alert(`${todoInput} + 100 = ${todoInput + 100}`);
 
      }
     if (todoInput >= 0){
