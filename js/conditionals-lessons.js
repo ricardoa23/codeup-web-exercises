@@ -105,3 +105,63 @@ switch(number2) {
         console.log('The number came after 8');
         break;
 }
+
+
+
+/**
+ * TODO:
+ * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+ * would like to enter a number. If they click 'Ok', prompt the user for a
+ * number, then use 3 separate alerts to tell the user:
+ *
+ * - whether the number is even or odd
+ * - what the number plus 100 is
+ * - if the number is negative or positive
+ *
+ * Do *NOT* display any of the above information
+ * if the user enters a value that is not of the number data type.
+ * Instead, use an alert to inform them of the incorrect input data type.
+ *
+ *
+ * Can you refactor your code to use functions?
+ * HINT: The way we prompt for a value could be improved
+ */
+
+let lastTodo = confirm('Would you like to enter a number?');
+if (lastTodo) {
+    let todoInput = prompt('Please enter your number below');
+    todoInput = parseInt(todoInput);
+    if (isNaN(todoInput) ) {
+        alert("Please enter a number");
+    } else {
+
+        if (todoInput % 2 === 0) {
+            alert(`${todoInput} is even.`);
+            alert(`${todoInput} + 100 = ${ + 100}`);
+        } else {
+            alert(`${todoInput} is Odd.`);
+            alert(`${todoInput} + 100 = ${todoInput + 100}`);
+
+        }
+        if (todoInput >= 0){
+            alert(`${todoInput} is positive `);
+        } else {
+            alert(`${todoInput} is negative`);
+        }
+    }
+} else {
+    alert('Okay but if you change your mind all you have to do is refresh the page.');
+}
+
+
+// function isEven(num) {
+//     return num % 2 === 0;
+// }
+//
+// function add100(num) {
+//     return num + 100;
+// }
+//
+// function isPositive() {
+//     return num > 0;
+// }

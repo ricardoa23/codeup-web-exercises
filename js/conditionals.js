@@ -104,6 +104,10 @@ switch (randomColor){
 //         alert(`${userInput.toLowerCase()} is something I'm not sure what to say about`);
 //         break;
 // }
+
+let userColor = prompt('What is your favorite color?')
+let userColorResult = analyzeColor(userColor)
+alert(analyzeColor(userColor))
 /* ########################################################################## */
 
 /**
@@ -164,7 +168,7 @@ function calculateTotal(price) {
 let userInput = prompt('What was your total?');
 alert(`Your lucky number is ${luckyNumber}`);
 alert(`Your total before the discount is $${userInput}, 
-with the discount applied your new total is $${calculateTotal(userInput)}`);
+with the discount applied your new total is $${calculateTotal(userInput).toFixed(2)}`);
 
 /**
  * TODO:
@@ -197,7 +201,7 @@ if (lastTodo) {
          alert(`${todoInput} is even.`);
          alert(`${todoInput} + 100 = ${ + 100}`);
      } else {
-         alert(`${`${todoInput} is odd.`}`);
+         alert(`${todoInput} is Odd.`);
          alert(`${todoInput} + 100 = ${todoInput + 100}`);
 
      }
@@ -210,3 +214,16 @@ if (lastTodo) {
 } else {
     alert('Okay but if you change your mind all you have to do is refresh the page.');
 }
+
+
+// function isEven(num) {
+//     return num % 2 === 0;
+// }
+//
+// function add100(num) {
+//     return num + 100;
+// }
+//
+// function isPositive() {
+//     return num > 0;
+// }
