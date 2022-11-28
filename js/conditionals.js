@@ -125,11 +125,13 @@ switch (randomColor){
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-let luckyNumber = Math.floor((Math.random() * 5) + 1)
+// let luckyNumber = Math.floor((Math.random() * 6))
+console.log(luckyNumber);
+console.log(calculateTotal(20))
 function calculateTotal(price) {
     switch (luckyNumber) {
         case 0:
-            return priceBeforeDiscount;
+            return price;
             break;
         case 1:
             return price - (price * 0.1);
@@ -141,7 +143,7 @@ function calculateTotal(price) {
             return price - (price * 0.35);
             break;
         case 4:
-            return  price - (price * 0.5);
+            return  price - (price * .5);
             break;
         case 5:
             return price * 0;
@@ -157,7 +159,12 @@ function calculateTotal(price) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+let userInput = prompt('What was your total?');
+alert(`Your lucky number is ${luckyNumber}`);
+alert(`Your total before the discount is $${userInput}, 
+with the discount applied your new total is $${calculateTotal(userInput)}`);
 
 /**
  * TODO:
@@ -177,3 +184,5 @@ function calculateTotal(price) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
