@@ -125,7 +125,7 @@ switch (randomColor){
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-// let luckyNumber = Math.floor((Math.random() * 6))
+let luckyNumber = Math.floor((Math.random() * 6))
 console.log(luckyNumber);
 console.log(calculateTotal(20))
 function calculateTotal(price) {
@@ -146,7 +146,7 @@ function calculateTotal(price) {
             return  price - (price * .5);
             break;
         case 5:
-            return price * 0;
+            return 0;
             break;
     }
 }
@@ -159,7 +159,7 @@ function calculateTotal(price) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
+// var luckyNumber = Math.floor(Math.random() * 6);
 
 let userInput = prompt('What was your total?');
 alert(`Your lucky number is ${luckyNumber}`);
@@ -210,4 +210,3 @@ if (lastTodo) {
 } else {
     alert('Okay but if you change your mind all you have to do is refresh the page.');
 }
-
