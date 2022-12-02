@@ -5,14 +5,14 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Arrays</title>
+  <title>Introduction to Arrays</title>
 </head>
 <body>
 
 <h1>Introduction to Arrays</h1>
 
 <script>
-
+  (function () {
   "use strict";
 
   //-- PRE-LECTURE QUESTIONS
@@ -228,6 +228,24 @@ for (let i = 0; i < 5; i++ ) {
 
   numbers.forEach(logEvenOddMessage)
 
+
+  let instructors = ['Justin', 'Issac', 'Jason', 'Laura', 'Javier'];
+  function logName(name) {
+    console.log(name);
+  }
+
+  instructors.forEach(logName);
+
+
+  let numbers2 = [3, 2, 4];
+  let total = 0;
+
+  // numbers2.forEach(function (number) {
+  //   total += number
+  // });
+  console.log(total) // output 0
+  numbers2.forEach(number => total += number)
+  console.log(total) //output 9 adds all the numbers together
   // console.log('------')
   // logEvenOddMessage(numbers[0]);
   // console.log('------')
@@ -318,7 +336,7 @@ for (let i = 0; i < classmates.length; i++) {
   // !! Write a function, returnLongString, that takes in an array of strings and returns all strings concatenated together !!
   // !! Write a function, returnArrSum, that takes in an array of values and returns the sum of all number elements !!
 
-
+  })();
 </script>
 
 </body>
