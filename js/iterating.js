@@ -66,8 +66,4 @@ console.log(item1);
 console.log(item2);
 console.log(finalItem);
 
-
-
-
-
 })();
