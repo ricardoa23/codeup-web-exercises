@@ -66,4 +66,54 @@ console.log(item1);
 console.log(item2);
 console.log(finalItem);
 
+
+
+//     1. Create an array of 10 foods. Write using a for loop, write logic that will log only the foods that start with a vowel. Write another solution using a forEach loop.
+
+let food = ['apple',
+    'pie',
+    'sushi',
+    'eggplant parmesan',
+    'Uni',
+    'Ravioli',
+    'oysters',
+    'ice Cream',
+    'Pupusas',
+    'Yakasoba'];// array of foods
+
+let vowels = ['a', 'e', 'i', 'o', 'u']
+
+
+// function findVowel() {
+//
+//     for (let i = 0; i < vowels.length; i++) {
+//         console.log(vowels[i])
+//         let singleVowel = vowels[i]
+//         return singleVowel
+//     }
+// }
+//
+// findVowel()
+//     console.log('---')
+//
+//     for (let i = 0, j = 0; i < food.length && j < 5; i++, j++) {
+//         // console.log(food[i])
+//         console.log(vowels[j])
+//          if (food[i].startsWith(vowels[j])) {
+//              console.log(food[i])
+//     }
+// }
+
+//instructors method
+}
+
+//     2. Write a function, addEvenNums, that takes in an array of numbers and adds up only the even numbers in the array and returns the sum of the even numbers. Assume any array inputs will only contain valid number elements and be non-empty.
+
+
+
+//     3. Write a function, checkIfNumInArray, that takes in an array of numbers and a number and returns the string
+// ‘input num in input array’ if the second argument is an element in the first argument array
+//     otherwise, the function should return the string ‘input num NOT in input array’
+
+
 })();
