@@ -105,6 +105,12 @@ let vowels = ['a', 'e', 'i', 'o', 'u']
 // }
 
 //instructors method
+for (let i = 0; i < food.length; i+= 1) {
+    let firstChar = food[i][0];
+    if (vowels.includes(firstChar)) {
+        console.log(food[i]);
+    }
+
 }
 
 //     2. Write a function, addEvenNums, that takes in an array of numbers and adds up only the even numbers in the array and returns the sum of the even numbers. Assume any array inputs will only contain valid number elements and be non-empty.
