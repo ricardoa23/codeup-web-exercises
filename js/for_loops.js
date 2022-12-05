@@ -4,10 +4,6 @@ function showMultiplicationTable(num) {
     }
 }
 showMultiplicationTable(9);
-//
-//
-//
-// My code below (didn't add any code to generate number)
 
 function randomNumber(max, min) {
    let num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -20,6 +16,15 @@ for (let i = 0; i < 10; i++) {
     } else {
         console.log(`${number} is false`);
     }
+}
+
+
+for (let i = 0; i < 9; i++) {
+ let answer = (i + 1).toString()
+    for (let j = 0; j < i; j++) {
+        answer += (i + 1);
+    }
+    console.log(answer)
 }
 
 
