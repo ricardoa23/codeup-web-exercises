@@ -392,15 +392,11 @@
 //   Can you accomplish each step using iteration?
 
 users.forEach(user => console.log(user.givenName));
-let joined = []
-users.forEach( user => {
+let joined = '';
 
-  joined = user.givenName;
-  users.forEach( user => {
-    console.log(joined.toString())
+  users.forEach( user => joined += user.givenName.trim() + ' ')
+  console.log(joined)
 
-  })
-})
 
   users.forEach(user => user.givenName = 'John Doe');
 
