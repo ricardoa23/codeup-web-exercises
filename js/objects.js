@@ -25,10 +25,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-
-  person.sayHello = function (name) {
-      return `Hello ${name}!`
+    person.sayHello = function () {
+      return `Hello ${this.firstName} ${this.lastName}!`
   }
+    console.log(person.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -51,7 +51,7 @@
 
     shoppers.forEach(shopper => {
         if (shopper.amount > 200) {
-            console.log(`${shopper.name} You're getting a 12% discount on your $${shopper.amount} purchase, 
+            console.log(`${shopper.name} You're getting a 12% discount on your $${shopper.amount.toFixed(2)} purchase, 
             your new total is $${(shopper.amount - (shopper.amount * 0.12)).toFixed(2)}`)
         }
     })
@@ -135,10 +135,10 @@ createBooks('No Easy Day', 'Mark Owen');
         let userInput = prompt("Please enter the book you'd like information on below");
         for (let i = 0; i < books.length; i++) {
             if (userInput.toLowerCase() === books[i].title.toLowerCase()) {
-                return alert(`Title: ${books[i].title} \nWritten by: ${books[i].author.firstName} ${books[i].author.lastName}` )
+                return alert(`Title: ${books[i].title} \nWritten by: ${books[i].author.firstName} ${books[i].author.lastName}`)
             } else {
                 alert("We don't have any info on that book please try again later")
-            }
+                }
         }
     }
 showBookInfo()
