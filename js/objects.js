@@ -75,6 +75,7 @@ createBooks('Raven One', 'Kevin Miller');
 createBooks('Fight Fight', 'Kevin Miller');
 createBooks('Magifamilia', 'Don Alejandro');
 createBooks('No Easy Day', 'Mark Owen');
+showBookInfo();
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -136,12 +137,11 @@ createBooks('No Easy Day', 'Mark Owen');
         for (let i = 0; i < books.length; i++) {
             if (userInput.toLowerCase() === books[i].title.toLowerCase()) {
                 return alert(`Title: ${books[i].title} \nWritten by: ${books[i].author.firstName} ${books[i].author.lastName}`)
-            } else {
-                alert("We don't have any info on that book please try again later")
-                }
+            }
         }
+        alert("We don't have any info on that book please try again later")
     }
-showBookInfo()
+
 })();
 
 
