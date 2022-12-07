@@ -130,6 +130,18 @@ createBooks('No Easy Day', 'Mark Owen');
         books.push(newBooks)
     }
 
+
+    function showBookInfo() {
+        let userInput = prompt("Please enter the book you'd like information on below");
+        for (let i = 0; i < books.length; i++) {
+            if (userInput.toLowerCase() === books[i].title.toLowerCase()) {
+                return alert(`Title: ${books[i].title} \nWritten by: ${books[i].author.firstName} ${books[i].author.lastName}` )
+            } else {
+                alert("We don't have any info on that book please try again later")
+            }
+        }
+    }
+showBookInfo()
 })();
 
 
