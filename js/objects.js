@@ -51,8 +51,9 @@
 
     shoppers.forEach(shopper => {
         if (shopper.amount > 200) {
-            console.log(`${shopper.name} You're getting a 12% discount on your $${shopper.amount.toFixed(2)} purchase, 
-            your new total is $${(shopper.amount - (shopper.amount * 0.12)).toFixed(2)}`)
+            console.log(`${shopper.name} You're getting a 12% discount on your $${shopper.amount.toFixed(2)} purchase, \nyour new total is ${(shopper.amount - (shopper.amount * 0.12)).toLocaleString('en-US', {style: 'currency', currency: 'USD'})}`)
+        } else {
+            console.log(`${shopper.name} You did not spend enough to receive a 12% you need to spend an additional ${(200 - shopper.amount).toLocaleString('en-US', { style: 'currency', currency: 'USD'})} to receive a Discount.`)
         }
     })
 
