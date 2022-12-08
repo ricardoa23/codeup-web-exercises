@@ -122,26 +122,44 @@ showBookInfo();
 
     function createBooks(title, author) {
         let authorName = author.split(' ')
-        let newBooks = {
+        let newBook = {
             title: title,
             author: {
                 firstName: authorName[0],
-                lastName: authorName[1]
+                lastName: (authorName[1] === undefined) ? authorName[1] = '' : authorName[1] = authorName[1]
             }
         }
-        books.push(newBooks)
+        books.push(newBook)
     }
-
-
-    function showBookInfo() {
-        let userInput = prompt("Please enter the book you'd like information on below");
-        for (let i = 0; i < books.length; i++) {
-            if (userInput.toLowerCase() === books[i].title.toLowerCase()) {
-                return alert(`Title: ${books[i].title} \nWritten by: ${books[i].author.firstName} ${books[i].author.lastName}`)
-            }
-        }
-        alert("We don't have any info on that book please try again later")
-    }
+    //below functions for prompting user to looks for book info and add book info to 'books'
+    // function showBookInfo() {
+    //
+    //     let userInput = prompt("Please enter the book you'd like information on below");
+    //     if (userInput !== null) {
+    //         for (let i = 0; i < books.length; i++) {
+    //             if (userInput.toLowerCase() === books[i].title.toLowerCase()) {
+    //                 return alert(`Title: ${books[i].title} \nWritten by: ${books[i].author.firstName} ${books[i].author.lastName}`)
+    //             }
+    //         }
+    //         let wouldYouLikeToAddOne = confirm(`We don't have any info on that book, Would you like to add it?`)
+    //         if (wouldYouLikeToAddOne) {
+    //             return createBooksInfo()
+    //         } else {
+    //             return alert('Okay Maybe next time')
+    //         }
+    //     } else {
+    //         alert('Okay Maybe Next time')
+    //     }
+    // }
+    // function createBooksInfo(title, author) {
+    //     let inputTitle = prompt('Please enter the title of the book? ')
+    //     let inputAuthor = prompt('Who wrote the book?')
+    //     if (inputTitle && inputAuthor ) {
+    //         return createBooks(inputTitle, inputAuthor);
+    //     } else {
+    //         alert('Okay maybe next time')
+    //     }
+    // }
 
 })();
 
