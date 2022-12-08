@@ -132,6 +132,7 @@ showBookInfo();
         books.push(newBook)
     }
     //below functions for prompting user to looks for book info and add book info to 'books'
+    // TO DO update the function with a for each loop
     // function showBookInfo() {
     //
     //     let userInput = prompt("Please enter the book you'd like information on below");
