@@ -81,7 +81,7 @@ let testTarget = 6;
 const twoSum = (nums, target) => {
     let newArr = [];
     for(let i = 0; i < nums.length; i++){
-        for(let j = 1; j < nums.length; j++){
+        for(let j = i + 1; j < nums.length; j++){
                 if (nums[i] + nums[j] === target) {
                     return [i, j]
                 }
@@ -90,3 +90,14 @@ const twoSum = (nums, target) => {
 }
 
 console.log(twoSum(testNums, testTarget));
+
+let testRoot1 = [3,5,1,6,2,9,8,null,null,7,4];
+let testRoot2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8];
+let leafSimilar = function(root1, root2) {
+
+};
+console.log(leafSimilar(testRoot1, testRoot2));
+testRoot1 = [1,2,3];
+testRoot2 = [1,3,2];
+console.log(leafSimilar(testRoot1,testRoot2))
+

@@ -5,25 +5,59 @@
     <title>Forms</title>
 </head>
 <body>
+<!--Form-->
 <h1>Register with us</h1>
-<form method="POST" action="https://request-inspector.glitch.me/">
-  <div>
-  <label for="username">Username</label>
-  <input type="text" name="username" id="username" placeholder="Email">
-  </div>
-  <div>
-  <label for="password">Password</label>
-  <input type="password" name="password" id="password" placeholder="Password">
-    <button disabled name="password">Submit
-      <option diabled value=></option>
-    </button>
-  </div>
-</form>
+<form method="POST" action="https://request-inspector.glitch.me/" target="_blank">
 <div>
+     <div>
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" placeholder="Email">
+     </div>
+    <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Password">
+      <br>
+    <button>Submit</button>
+    </div>
+</div>
+
+<!--Bio text area-->
   <div>
   <label for="bio">Bio</label>
-    </div>
-<textarea placeholder="Tell us about yourself" id="bio"></textarea>
+    <textarea placeholder="Tell us about yourself" id="bio"></textarea>
+  </div>
+<!--radio buttons-->
+<div>
+  <h2>How did you hear about us?</h2>
+  <input type="radio" id="tv" name="q1" value="TV">
+  <label for="tv">TV</label>
+<br>
+  <input type="radio" id="billboard" name="q1" value="Billboard">
+  <label for="billboard">Billboard</label>
+<br>
+  <input type="radio" id="newspaper" name="q1">
+  <label for="newspaper">Newspaper</label>
+<br>
+  <input type="radio" id="internet" name="q1">
+  <label for="internet"> On the Web</label>
+<br>
+  <input type="radio" id="other" name="q1">
+  <label for="other">other</label>
+  <label for="other-text"></label>
+  <br>
+  <textarea placeholder="If So Please Specify" id="other-text" rows="1"></textarea>
 </div>
+<label for="browser">Which browser are you using?</label>
+<select name="browser" id="browser">
+  <option hidden disabled selected value>Select an Option</option>
+  <option value="chrome">Chrome</option>
+  <option value="safari">Safari</option>
+  <option value="firefox">Firefox</option>
+  <option value="edge">Microsoft Edge</option>
+  <option value="Opera">Opera</option>
+  <option value="other">Other</option>
+</select>
+<button name="browser">Submit</button>
+</form>
 </body>
 </html>
