@@ -17,25 +17,30 @@
      * Read each console log below, and write some javascript code to perform
      * the step that it describes
      */
-planets.unshift('Sun')
+let sun = planets.unshift('Sun')
     console.log('Adding "The Sun" to the beginning of the planets array.');
-    console.log(planets);
-planets.push('Pluto');
-    console.log('Adding "Pluto" to the end of the planets array.');
-    console.log(planets);
-planets.shift()
-    console.log('Removing "The Sun" from the beginning of the planets array.');
-    console.log(planets);
-planets.pop()
-    console.log('Removing "Pluto" from the end of the planets array.');
-    console.log(planets);
+    console.log(sun);
 
+let pluto = planets.push('Pluto');
+    console.log('Adding "Pluto" to the end of the planets array.');
+    console.log(pluto);
+
+let shift = planets.shift();
+    console.log('Removing "The Sun" from the beginning of the planets array.');
+    console.log(shift);
+
+let pop = planets.pop()
+    console.log('Removing "Pluto" from the end of the planets array.');
+    console.log(pop);
+let indexOf = planets.indexOf('Earth')
     console.log('Finding and logging the index of "Earth" in the planets array.');
-    console.log(planets.indexOf('Earth'))
-    planets.reverse()
+    console.log(indexOf)
+
+let reverse = planets.reverse()
     console.log("Reversing the order of the planets array.");
-    console.log(planets);
-planets.sort()
+    console.log(reverse);
+
+let sort = planets.sort()
     console.log("Sorting the planets array.");
-    console.log(planets);
+    console.log(sort);
 })();
