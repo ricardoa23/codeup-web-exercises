@@ -1,5 +1,12 @@
-body {
-    background-color: lightgray;
+* {
+    font-family: "American Typewriter", sans-serif;
+}
+html {
+    background-image: url("../img/background-image.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .fancy-header {
@@ -11,3 +18,29 @@ body {
 h2 {
     text-decoration: underline;
 }
+
+ul {
+    list-style: square;
+}
+ol {
+    list-style: upper-roman;
+}
+
+table, td, th, tr {
+    font-size: large;
+    padding: 10px;
+}
+
+a:hover {
+    color: greenyellow;
+}
+a:link {
+    color: darkblue;
+}
+a:visited {
+    color: dodgerblue;
+}
+a:active {
+    color: black;
+}
+
