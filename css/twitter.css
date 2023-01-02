@@ -66,3 +66,15 @@ a {
 .text-muted {
     color: var(--main-link-color);
 }
+.profile-details {
+    width: 25%;
+    margin: .5em 0;
+}
+.timeline {
+    width: 50%;
+    margin: .5em 0;
+}
+.who-to-follow {
+    width: 25%;
+    margin: .5em 0;
+}

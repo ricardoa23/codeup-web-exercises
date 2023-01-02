@@ -83,7 +83,7 @@
     }
 ];
 
-console.log(returnLongestPetName(pets)); // returns 'Mr. Salmon'
+// console.log(returnLongestPetName(pets)); // returns 'Mr. Salmon'
 function returnLongestPetName(input) {
     let longestPetName = ''
     input.forEach( (pet) => {
@@ -93,3 +93,19 @@ function returnLongestPetName(input) {
     })
     return longestPetName;
 }
+
+
+function returnLastTwoChars(string) {
+    return string.slice(-2);
+}
+// console.log(returnLastTwoChars('kitten'))
+
+
+function returnLastCharsReversed(string, num) {
+    if(num !== 0) {
+        return string.slice(-num).split('').reverse().join('');
+    } else {
+        return '';
+    }
+}
+// console.log(returnLastCharsReversed('candle', 4))
