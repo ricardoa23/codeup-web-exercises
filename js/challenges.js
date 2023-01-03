@@ -109,3 +109,13 @@ function returnLastCharsReversed(string, num) {
     }
 }
 // console.log(returnLastCharsReversed('candle', 4))
+
+function iBeforeE(input) {
+    return input.replaceAll('ei', 'ie');
+}
+
+console.log(iBeforeE('ei')); // returns ‘ie’
+console.log(iBeforeE('height')); // returns ‘hieght’
+console.log(iBeforeE('heist')); // returns ‘hiest’
+console.log(iBeforeE('their')); // returns ‘thier’
+console.log(iBeforeE('theirtheir')); // returns ‘thierthier’
