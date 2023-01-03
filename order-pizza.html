@@ -39,17 +39,219 @@
     <div class="p-3 mb-2 bg-light text-dark opacity-75 d-none d-lg-block text-center fs-3 position-absolute top-50 start-50 translate-middle w-100">Welcome to Pizza World</div>
 </div>
 <h2>Build your own pizza!</h2>
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active " id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><span class="badge rounded-pill bg-secondary">1</span>Home</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="badge rounded-pill bg-secondary">2</span>Profile</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><span class="badge rounded-pill bg-secondary">3</span>Contact</button>
-    </li>
-  </ul>
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+	  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#size-and-crust" type="button" role="tab" aria-controls="size-and-crust" aria-selected="true"><span class="badge rounded-pill bg-secondary">1 </span> Size and Crust</button>
+	  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#cheese-and-sauce" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><span class="badge rounded-pill bg-secondary">2</span> Cheese and Sauce</button>
+	  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><span class="badge rounded-pill bg-secondary">3</span> Toppings</button>
+	</div>
+   </nav>
+   <div class="tab-content" id="nav-tabContent">
+	<div class="tab-pane fade show active" id="size-and-crust" role="tabpanel" aria-labelledby="size-and-crust">
+
+		<!-- <div class="card ">
+			<div class="card-header bg-primary text-light">
+			  Choose Size and Crust
+			</div>
+			<div class="card-body">
+			    <div class="card w-100 card border-secondary mb-3" style="width: 18rem;">
+				   <div class="card-header">
+					Hand Tossed
+				   </div>
+				   <ul class="list-group list-group-flush">
+					<li class="list-group-item">Garlic seasoned crust with a rich, buttery taste</li>
+					<li class="list-group-item">
+					  <div class="form-check">
+						 <input class="form-check-input" type="radio" name="size" id="size-small">
+						 <label class="form-check-label" for="size">
+						   Small (10")
+						 </label>
+					    </div>
+					</li>
+					<li class="list-group-item">
+					  <div class="form-check">
+						 <input class="form-check-input" type="radio" name="size" id="size-medium">
+						 <label class="form-check-label" for="size">
+						   Medium (12")
+						 </label>
+					    </div>
+					</li>
+				   </ul>
+				 </div>
+				 <div class="card w-100 card border-secondary mb-3" style="width: 18rem;">
+				   <div class="card-header">
+					Crispy Thin
+				   </div>
+				   <ul class="list-group list-group-flush">
+					<li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
+					<li class="list-group-item"> <div class="form-check">
+					  <input class="form-check-input" type="radio" name="size" id="size-thin-medium">
+					  <label class="form-check-label" for="size">
+					    Medium (12")
+					  </label>
+					</div>
+				   </li>
+					<li class="list-group-item">
+					  <div class="form-check">
+						 <input class="form-check-input" type="radio" name="size" id="size-thin-large">
+						 <label class="form-check-label" for="size">
+						   Large (14")
+						 </label>
+					    </div>
+					</li>
+			</div>
+		 </div>
+		 <div class="card-footer text-muted d-flex flex-row-reverse w-100">
+			<button type="button" class="btn btn-primary">Next Step &#8594;</button>
+		   </div>
+			</ul>
+		   </div> -->
+
+	</div>
+	<div class="tab-pane fade" id="cheese-and-sauce" role="tabpanel" aria-labelledby="cheese-and-sauce">
+
+		<!-- <div class="card ">
+			<div class="card-header bg-primary text-light">
+			  Choose Cheese and Sauce
+			</div>
+			<div class="card-body">
+			    <div class="card w-100 card border-secondary mb-3" style="width: 18rem;">
+				   <div class="card-header">
+					Cheese
+				   </div>
+				   <ul class="list-group list-group-flush">
+					<li class="list-group-item">How Cheesy should it be?</li>
+					<li class="list-group-item">
+						<select class="form-select" aria-label="Cheese">
+							<option value="no-cheese">None</option>
+							<option value="light-cheese">Light</option>
+							<option value="normal-cheese" selected>Normal</option>
+							<option value="extra-cheese">Extra Cheesy</option>
+						   </select>
+					</li>
+				   </ul>
+				 </div>
+				 <div class="card w-100 card border-secondary mb-3" style="width: 18rem;">
+				   <div class="card-header">
+					Sauce
+				   </div>
+				   <ul class="list-group list-group-flush">
+					<li class="list-group-item">What Type?</li>
+					<li class="list-group-item">
+						<select class="form-select" aria-label="sauce">
+							<option value="tomato" selected>Tomato</option>
+							<option value="bbq-sauce">BBQ Sauce</option>
+							<option value="alfredo">Creamy Alfredo</option>
+							<option value="None">None</option>
+						   </select>
+					</li>
+					<li class="list-group-item">How Much?</li>
+					<li class="list-group-item">
+						<select class="form-select" aria-label="Cheese">
+							<option value="no-sauce">None</option>
+							<option value="light-sauce">Light</option>
+							<option value="normal-sauce" selected>Normal</option>
+							<option value="extra-sauce">Extra aucey</option>
+						   </select>
+					</li>
+			    
+				</div>
+			</div>
+			<div class="card-footer text-muted">
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-primary">&#8592; Previous Step</button>
+					<button type="button" class="btn btn-primary">Next Step &#8594;</button>
+				   </div>
+			</div>
+			</ul>
+		   </div> -->
+
+	</div>
+	<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+   </div>
+
+
+   <div class="card ">
+	<div class="card-header bg-primary text-light">
+	  Choose Toppings
+	</div>
+	<div class="card-body">
+	    <div class="card w-100 card border-secondary mb-3" style="width: 18rem;">
+		   <div class="card-header">
+			Choose Meat(s)
+		   </div>
+		   <ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="pepperoni" id="toppings">
+					<label class="form-check-label" for="toppings">
+					  Pepperoni
+					</label>
+				   </div>
+			</li>
+			<li class="list-group-item">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="Sausage" id="toppings">
+					<label class="form-check-label" for="toppings">
+					  Sausage
+					</label>
+				   </div>
+			</li>
+			<li class="list-group-item">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="ham" id="toppings">
+					<label class="form-check-label" for="toppings">
+					  Ham
+					</label>
+				   </div>
+			</li>
+			<li class="list-group-item">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="bacon" id="toppings">
+					<label class="form-check-label" for="toppings">
+					  Bacon
+					</label>
+				   </div>
+			</li>
+		   </ul>
+		 </div>
+		 <div class="card w-100 card border-secondary mb-3" style="width: 18rem;">
+		   <div class="card-header">
+			Crispy Thin
+		   </div>
+		   <ul class="list-group list-group-flush">
+			<li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
+			<li class="list-group-item"> <div class="form-check">
+			  <input class="form-check-input" type="radio" name="size" id="size-thin-medium">
+			  <label class="form-check-label" for="size">
+			    Medium (12")
+			  </label>
+			</div>
+		   </li>
+			<li class="list-group-item">
+			  <div class="form-check">
+				 <input class="form-check-input" type="radio" name="size" id="size-thin-large">
+				 <label class="form-check-label" for="size">
+				   Large (14")
+				 </label>
+			    </div>
+			</li>
+	</div>
+ </div>
+ <div class="card-footer text-muted d-flex flex-row-reverse w-100">
+	<button type="button" class="btn btn-primary">Next Step &#8594;</button>
+   </div>
+	</ul>
+   </div>
+ 
+
+
+
+
+
+
+
+
 </div>
 </body>
 </html>
