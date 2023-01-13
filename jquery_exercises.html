@@ -10,13 +10,13 @@
 
 <body>
 
-    <h1 class="class1" id="header">Hello</h1>
-    <p class="class1" id="p-tag">Hola</p>
-    <ul class="class1 class 2" id="ul-tag">
+      <h1 class="codeup" id="header">Hello</h1>
+    <p class="codeup" id="p-tag">Hola</p>
+    <ul class=" class2" id="ul-tag">
         <li class="class2" id="li-tag">item 1</li>
         <li class="class2" id="li-tag-2">item 2</li>
     </ul>
-    <div class="class1" id="div-tag">this is a div</div>
+    <div class="" id="codeup">this is a div</div>
 
     <script src="./js/jquery-3.6.3.js"></script>
     <script>
@@ -27,7 +27,13 @@
         // let header = $('#li-tag').html();
         // alert(header);
 
+        // $('.codeup').css('border', '1px solid red' )
 
+        $('li').css('font-size', '20px')
+        $('h1, p, li').css('background-color', 'yellow')
+        $('h1')
+        let header = $('h1').html();
+        alert(header);
 
     </script>
 </body>
