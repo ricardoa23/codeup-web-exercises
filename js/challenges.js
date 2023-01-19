@@ -74,12 +74,11 @@
 // ‘i’ or ‘I’ becomes ‘1’
 // ‘s’ or ‘S’ becomes ‘$’
 //
-encodeStr('apple') // returns ‘@pple’
-encodeStr('codeup') // returns ‘codeup’
-encodeStr('SASS') // returns ‘$@$$’
-encodeStr('bike') // returns ‘b1ke’
+console.log(encodeStr('apple')) // returns ‘@pple’
+console.log(encodeStr('codeup')) // returns ‘codeup’
+console.log(encodeStr('SASS')) // returns ‘$@$$’
+console.log(encodeStr('bike')) // returns ‘b1ke’
 
 function encodeStr(input) {
-    input = input.toLowerCase().replaceAll('a', '@').replaceAll('i', '1').replaceAll('s', '$');
-    return input;
+    return input.toLowerCase().replaceAll('a', '@').replaceAll('i', '1').replaceAll('s', '$');;
 }
