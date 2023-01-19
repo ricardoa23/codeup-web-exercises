@@ -1,7 +1,43 @@
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
-.highlight{
-    background-color: yellow;
+.highlight {
+  background-color: yellow;
+}
+.painting {
+  height: 300px;
+  width: 300px;
+  border: 10px solid brown;
+
+}
+
+.painting-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#buttons {
+    display: flex;
+    justify-items: center;
+    justify-content:space-evenly;
+}
+
+#painting-1 {
+    background-image: url(../img/painting-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#painting-2 {
+    background-image: url(../img/painting-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#painting-3 {
+    background-image: url(../img/painting-3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
