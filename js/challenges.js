@@ -1,4 +1,3 @@
-
 // const neighborhood1 = {
 //     neighborhood: "Lovely Estates",
 //     medianHomePrice: 280000,
@@ -56,9 +55,6 @@
 // console.log(whereToLive(neighborhood3));// returns true
 // console.log(whereToLive(neighborhood4)); // returns false due to median home price
 
-
-
-
 // function whereToLive(potential) {
 //     let ratingTotal = 0;
 //     for(let i = 0; i < potential.schools.length; i++) {
@@ -67,18 +63,32 @@
 //    return (potential.medianHomePrice < 300000 && potential.crimeRate === 'low' && ratingTotal <= 24) ? true : false;
 // }
 
-
 // Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
 //
 // ‘a’ or ‘A’ becomes ‘@’
 // ‘i’ or ‘I’ becomes ‘1’
 // ‘s’ or ‘S’ becomes ‘$’
 //
-console.log(encodeStr('apple')) // returns ‘@pple’
-console.log(encodeStr('codeup')) // returns ‘codeup’
-console.log(encodeStr('SASS')) // returns ‘$@$$’
-console.log(encodeStr('bike')) // returns ‘b1ke’
+console.log(encodeStr("apple")); // returns ‘@pple’
+console.log(encodeStr("Apple")); // returns ‘@pple’
+console.log(encodeStr("codeup")); // returns ‘codeup’
+console.log(encodeStr("SASS")); // returns ‘$@$$’
+console.log(encodeStr("bike")); // returns ‘b1ke’
+console.log(encodeStr("Bike")); // returns ‘B1ke’
 
-function encodeStr(input) {
-    return input.toLowerCase().replaceAll('a', '@').replaceAll('i', '1').replaceAll('s', '$');;
+// function encodeStr(input) {
+//   return input
+//     .replaceAll("A", "@")
+//     .replaceAll("a", "@")
+//     .replaceAll("I", "1")
+//     .replaceAll("i", "1")
+//     .replaceAll("S", "$")
+//     .replaceAll("s", "$");
+// }
+
+function encodeStr (input){
+    return input
+        .replace(/a/gi, "@" )
+        .replace(/S/gi, "$")
+        .replace(/i/gi, "1");
 }
