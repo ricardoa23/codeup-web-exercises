@@ -12,8 +12,34 @@
     />
     <title>Document</title>
   </head>
-  <body>
+  <body class="bg-dark">
+    <h1 class="text-center text-light">Blog about something</h1>
+    <div id="posts"></div>
+    <script src="./js/jquery-3.6.3.js"></script>
+    <script>
+       (function() { 
+      $.ajax("./data/blog.json").done(function (blog) {
+        $("#posts").append(populateBlogPost(blog));
+      });
 
-<div id="posts"></div>
+      function populateBlogPost(blogs) {
+        let updatedCategories;
+        let post = ``;
+        for (let i = 0; i < blogs.length; i ++) {
+            updatedCategories = blogs[i].categories.join(", ");
+            post += `<article class="my-5 mx-3 card border border-dark">
+                    <div class= "card-header d-flex justify-content-between align-items-baseline align-content-end bg-primary text-light">
+                    <h3 class="my-0">${blogs[i].title}</h3>
+                    <div>${blogs[i].date}</div>
+                    </div>
+                    <div class="bg-primary-subtle px-3">${blogs[i].content}</div>
+                    <div class="card-footer fw-bold bg-primary text-light"> ${updatedCategories} </div>
+                    </article>
+                    `
+        }
+        return post;
+      }
+    })();
+    </script>
   </body>
 </html>

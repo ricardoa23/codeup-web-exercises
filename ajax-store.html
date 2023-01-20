@@ -223,11 +223,8 @@
       (function () {
         "use strict";
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-        $.get("./data/inventory.json").done(function (product) {
-          console.log(product);
-        });
+        
 
-        let table = document.querySelector("#insertProducts");
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
@@ -235,7 +232,6 @@
 
         $.get("./data/inventory.json").done(function (product) {
           let tableRow = "";
-          table.innerHTML = "";
           let categoriesSpaced;
           for (let i = 0; i < product.length; i++) {
             categoriesSpaced = product[i].categories.join(', ')
@@ -252,7 +248,6 @@
         $("#reload").on("click", function () {
           $.get("./data/inventory.json").done(function (product) {
             let tableRow = "";
-            table.innerHTML = "";
             let categoriesSpaced;
             for (let i = 0; i < product.length; i++) {
                 categoriesSpaced = product[i].categories.join(', ')
@@ -263,7 +258,7 @@
                             <td>${categoriesSpaced}</td>
                             </tr>`;
             }
-            $("#insertProducts").append(tableRow);
+            $("#insertProducts").html(tableRow);
           });
         });
       })();

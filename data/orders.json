@@ -1,11 +1,11 @@
 [
     {
-        "orderNumber": 100,
+        "orderNumber": 1,
         "itemOrdered": "Small Sweater",
         "orderedBy": "Johnny Be Good"
     },
     {
-        "orderNumber": 999,
+        "orderNumber": 2,
         "itemOrdered": "Funny Shirt",
         "orderedBy": "Linda"
     },
