@@ -7,7 +7,7 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet'/>
     <title>Weather Map API Project</title>
     <style>
-      #id{
+      #map{
         height: 70vh;
         width: 60vh;
       }
@@ -20,19 +20,27 @@
       <header>
         <h1>Weather Map Project</h1>
       </header>
+      <aside id="weather-data">
+        
+      </aside>
       <main>
+        <form action="POST" id="">
+          <label for="location-search">Location</label>
+          <input type="text" name="location-search">
+          <input type="button" value="Search">
+        </form>
         <div>
         <div id='map'></div>
       </div>
       </main>
     </div>
-    <!--JQuery JS file-->
-    <script src="./js/jquery-3.6.3.js"></script>
     <!--Keys JS file-->
     <script src="./js/keys.js"></script>
     <!--Mapbox JS-->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
     <script src="./js/mapbox-geocoder-utils.js"></script>
+    <!--JQuery JS file-->
+    <script src="./js/jquery-3.6.3.js"></script>
     <!--Custom JS-->
     <script src="./js/weather-map.js"></script>
   </body>
