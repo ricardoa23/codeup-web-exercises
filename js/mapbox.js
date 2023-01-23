@@ -69,8 +69,6 @@ let testMarker = new mapboxgl.Marker()
   });
 }
 
-function popupFunction() {
 
-}
   markersFunction(restaurants)
 // });
