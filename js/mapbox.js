@@ -25,12 +25,11 @@ let restaurants = [
 ];
 
 mapboxgl.accessToken = keys.mapbox;
-
 const map = new mapboxgl.Map({
-  container: "map", // container ID
-  style: "mapbox://styles/mapbox/streets-v12", // style URL
-  center: [-98.49542639905354, 29.424632538592306], // starting position [lng, lat]
-  zoom: 11, // starting zoom
+  container: "map",
+  style: "mapbox://styles/mapbox/streets-v12",
+  center: [-98.49542639905354, 29.424632538592306],
+  zoom: 11, 
 });
 
 
@@ -42,7 +41,7 @@ let testMarker = new mapboxgl.Marker()
     function markersFunction(input) {
   let newMarker;
   restaurants.forEach((restaurant) => {
-    geocode(restaurant.address, keys.mapbox).then(function (results) {
+    geocode(restaurant.address, keys.mapbox).then(function () {
     newMarker = new mapboxgl.Marker()
       .setLngLat([restaurant.lng, restaurant.lat])
       .addTo(map);
@@ -50,12 +49,10 @@ let testMarker = new mapboxgl.Marker()
       <h4>${restaurant.name}</h4>
       <p>${restaurant.type}</p>
       <p>${restaurant.address}</p>`)
-      .addTo(map);
       newMarker.setPopup(popup)
   });
   
   });
 }
-
   markersFunction(restaurants)
 // });

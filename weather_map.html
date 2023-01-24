@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet'/>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+    <link rel="stylesheet" href="./css/weather-map.css">
     <title>Weather Map API Project</title>
     <style>
       #map{
-        height: 70vh;
-        width: 60vh;
+        height: 80vh;
+        width: 90vw;
       }
     </style>
   </head>
@@ -24,14 +26,10 @@
         
       </aside>
       <main>
-        <form action="POST" id="">
-          <label for="location-search">Location</label>
-          <input type="text" name="location-search">
-          <input type="button" value="Search">
-        </form>
-        <div>
+          <!-- <input type="text" name="location-search" placeholder="Search By City" id="search-bar">
+          <input type="button" value="Search" id="search-button"> -->
+        
         <div id='map'></div>
-      </div>
       </main>
     </div>
     <!--Keys JS file-->
@@ -39,9 +37,11 @@
     <!--Mapbox JS-->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
     <script src="./js/mapbox-geocoder-utils.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     <!--JQuery JS file-->
     <script src="./js/jquery-3.6.3.js"></script>
     <!--Custom JS-->
     <script src="./js/weather-map.js"></script>
+
   </body>
 </html>

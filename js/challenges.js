@@ -69,26 +69,77 @@
 // ‘i’ or ‘I’ becomes ‘1’
 // ‘s’ or ‘S’ becomes ‘$’
 //
-console.log(encodeStr("apple")); // returns ‘@pple’
-console.log(encodeStr("Apple")); // returns ‘@pple’
-console.log(encodeStr("codeup")); // returns ‘codeup’
-console.log(encodeStr("SASS")); // returns ‘$@$$’
-console.log(encodeStr("bike")); // returns ‘b1ke’
-console.log(encodeStr("Bike")); // returns ‘B1ke’
+// console.log(encodeStr("apple")); // returns ‘@pple’
+// console.log(encodeStr("Apple")); // returns ‘@pple’
+// console.log(encodeStr("codeup")); // returns ‘codeup’
+// console.log(encodeStr("SASS")); // returns ‘$@$$’
+// console.log(encodeStr("bike")); // returns ‘b1ke’
+// console.log(encodeStr("Bike")); // returns ‘B1ke’
 
-// function encodeStr(input) {
-//   return input
-//     .replaceAll("A", "@")
-//     .replaceAll("a", "@")
-//     .replaceAll("I", "1")
-//     .replaceAll("i", "1")
-//     .replaceAll("S", "$")
-//     .replaceAll("s", "$");
+// // function encodeStr(input) {
+// //   return input
+// //     .replaceAll("A", "@")
+// //     .replaceAll("a", "@")
+// //     .replaceAll("I", "1")
+// //     .replaceAll("i", "1")
+// //     .replaceAll("S", "$")
+// //     .replaceAll("s", "$");
+// // }
+
+// function encodeStr (input){
+//     return input
+//         .replace(/a/gi, "@" )
+//         .replace(/S/gi, "$")
+//         .replace(/i/gi, "1");
 // }
 
-function encodeStr (input){
-    return input
-        .replace(/a/gi, "@" )
-        .replace(/S/gi, "$")
-        .replace(/i/gi, "1");
+// Make a function, reverseStrings, that takes in an array of objects and reverses the value of the 'str' properties.
+
+
+let strs = [
+	{
+		id: 1,
+		str: 'hello'
+	},
+	{
+		id: 2,
+		str: 'world'
+	},
+	{
+		id: 3,
+		str: 'codeup'
+	},
+	{
+		id: 4,
+		str: 'x'
+	}
+]
+
+console.log(reverseStrings(strs)) // returns...
+
+// [
+// 	{
+// 		id: 1,
+// 		str: 'olleh'
+// 	},
+// 	{
+// 		id: 2,
+// 		str: 'dlrow'
+// 	},
+// 	{
+// 		id: 3,
+// 		str: 'puedoc'
+// 	},
+// 	{
+// 		id: 4,
+// 		str: 'x'
+// 	}
+// ]
+
+
+function reverseStrings(strings) {
+    strings.forEach(string => {
+         string.str = string.str.split('').reverse().join('')
+        });
+        return strings;
 }
