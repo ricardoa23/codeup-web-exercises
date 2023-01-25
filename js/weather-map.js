@@ -48,8 +48,8 @@
     for (let i = 0; i < data.list.length; i += 8) {
       let date = new Date(data.list[i].dt * 1000);
       date = date.toLocaleDateString("en-US", options);
-      html += `<div class="card bg-secondary-subtle m-2">
-    <div class="card-header bg-secondary fs-4 text-center">${date}</div>
+      html += `<div class="card bg-secondary-subtle shadow-lg bg-body-tertiary rounded m-2">
+    <div class="card-header bg-secondary fs-5 text-center">${date}</div>
     <div class="d-flex justify-content-center">
     <img id="wicon"src="http://openweathermap.org/img/w/${
       data.list[i].weather[0].icon
