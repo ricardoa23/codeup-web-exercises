@@ -1,15 +1,15 @@
-.page-wrapper{
-    background-image: url(../img/weather-map-background.png);
-    background-size: cover;
-    /* background-repeat: no-repeat; */
+.page-wrapper {
+  background-image: url(../img/weather-map-background.png);
+  background-size: cover;
+  /* background-repeat: no-repeat; */
 }
 
 #map {
-    height: 80vh;
-    width: 100vw;
-    margin: 2.5rem;
-  }
-  #wicon{
-    height: 4rem;
-    width: 4rem;
-  }
+  height: 80vh;
+  width: 100vw;
+  margin: 2.5rem;
+}
+#wicon {
+  height: 4rem;
+  width: 4rem;
+}

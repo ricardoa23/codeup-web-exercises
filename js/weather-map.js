@@ -25,19 +25,18 @@
     coordinates.lng = mapSearchCoord.lng;
     coordinates.lat = mapSearchCoord.lat;
     marker.setLngLat(coordinates).addTo(map);
-    console.log(coordinates);
-    apiCall(e)
+    apiCall(e);
   });
-// Loads weather on load
-  map.on('load', function(e) {
-    apiCall(e)
-  })
+  // Loads weather on load
+  map.on("load", function (e) {
+    apiCall(e);
+  });
   // add marker
-  map.on("click", function(e) {
+  map.on("click", function (e) {
     addMarker(e);
     apiCall(e);
   });
- 
+
   function creatingDataCards(data) {
     let html = "";
     const options = {
@@ -53,15 +52,25 @@
     <div class="card-header bg-secondary fs-4 text-center">${date}</div>
     <div class="d-flex justify-content-center">
     <img id="wicon"src="http://openweathermap.org/img/w/${
-      data.list[i].weather[0].icon}.png" />
+      data.list[i].weather[0].icon
+    }.png" />
       </div>
-    <p class="text-center text-uppercase fs-5 fw-bold">${data.list[i].weather[0].description}</p>
-    <p class="text-center my-1">High ${parseInt(data.list[i].main.temp_max)}&#8457</p>
-    <p class="text-center my-1">Low ${parseInt(data.list[i].main.temp_min)}&#8457</p>
-    <p class="text-center my-1">Feels Like ${parseInt(data.list[i].main.feels_like)}&#8457</p>
-    <p class="text-center my-1">Pressure ${parseInt(data.list[i].main.pressure)} hPa</p>
+    <p class="text-center text-uppercase fs-5 fw-bold">${
+      data.list[i].weather[0].description
+    }</p>
+    <p class="text-center my-1">High ${parseInt(
+      data.list[i].main.temp_max
+    )}&#8457</p>
+    <p class="text-center my-1">Low ${parseInt(
+      data.list[i].main.temp_min
+    )}&#8457</p>
+    <p class="text-center my-1">Feels Like ${parseInt(
+      data.list[i].main.feels_like
+    )}&#8457</p>
+    <p class="text-center my-1">Pressure ${parseInt(
+      data.list[i].main.pressure
+    )} hPa</p>
     </div class="card-footer">`;
-      console.log(data);
     }
     return html;
   }
@@ -69,7 +78,6 @@
   function addMarker(event) {
     coordinates = event.lngLat;
     marker.setLngLat(coordinates).addTo(map);
-    // console.log("Lng:", coordinates.lng, "Lat:", coordinates.lat);
     return coordinates;
   }
 
@@ -90,5 +98,4 @@
       });
   }
 
-  console.log(coordinates);
 })();
