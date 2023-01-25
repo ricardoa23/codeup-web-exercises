@@ -1,13 +1,15 @@
-/* #weather-data {
-  display: flex;
+.page-wrapper{
+    background-image: url(../img/weather-map-background.png);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
 }
-.weather-cards {
-    border: solid 1px black;
-}
-.date{
-    font-size: 10px;
-}
-img{
-    height: 100px;
-    width: 100px;
-} */
+
+#map {
+    height: 80vh;
+    width: 100vw;
+    margin: 2.5rem;
+  }
+  #wicon{
+    height: 4rem;
+    width: 4rem;
+  }
