@@ -39,12 +39,12 @@ const languages = ["html", "css", "javascript"];
 
 // TODO: rewrite the object literal using object property shorthand
 
- users = {
+ const user = {
     name,
     email,
     languages,
 };
-
+users.push(user)
 // users.push({
 //   name: name,
 //   email: email,
@@ -70,7 +70,7 @@ users.forEach(function (user) {
   // TODO: rewrite the assignment below to use template strings
   developers.push(
     // name + "'s email is " + email + name + " knows " + languages.join(", ")
-    `${name}'s email is ${email} ${name} knowsw ${languages.join(', ')}`
+    `${name}'s email is ${email} ${name} knows ${languages.join(', ')}`
   );
 });
 
