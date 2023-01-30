@@ -39,12 +39,12 @@ const languages = ["html", "css", "javascript"];
 
 // TODO: rewrite the object literal using object property shorthand
 
- const user = {
-    name,
-    email,
-    languages,
+const user = {
+  name,
+  email,
+  languages,
 };
-users.push(user)
+users.push(user);
 // users.push({
 //   name: name,
 //   email: email,
@@ -65,12 +65,12 @@ users.forEach(function (user) {
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
- const {name, email, languages} = user
+  const { name, email, languages } = user;
 
   // TODO: rewrite the assignment below to use template strings
   developers.push(
     // name + "'s email is " + email + name + " knows " + languages.join(", ")
-    `${name}'s email is ${email} ${name} knows ${languages.join(', ')}`
+    `${name}'s email is ${email} ${name} knows ${languages.join(", ")}`
   );
 });
 
@@ -81,6 +81,6 @@ let list = "<ul>";
 for (let developer of developers) {
   // TODO: rewrite the assignment below to use template strings
   // list += "<li>" + developer + "</li>";
-  list += `<li> ${developer} </li>`
-};
+  list += `<li> ${developer} </li>`;
+}
 list += "</ul>";

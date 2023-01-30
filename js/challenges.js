@@ -96,26 +96,26 @@
 // Make a function, reverseStrings, that takes in an array of objects and reverses the value of the 'str' properties.
 
 
-let strs = [
-	{
-		id: 1,
-		str: 'hello'
-	},
-	{
-		id: 2,
-		str: 'world'
-	},
-	{
-		id: 3,
-		str: 'codeup'
-	},
-	{
-		id: 4,
-		str: 'x'
-	}
-]
+// let strs = [
+// 	{
+// 		id: 1,
+// 		str: 'hello'
+// 	},
+// 	{
+// 		id: 2,
+// 		str: 'world'
+// 	},
+// 	{
+// 		id: 3,
+// 		str: 'codeup'
+// 	},
+// 	{
+// 		id: 4,
+// 		str: 'x'
+// 	}
+// ]
 
-console.log(reverseStrings(strs)) // returns...
+// console.log(reverseStrings(strs)) // returns...
 
 // [
 // 	{
@@ -137,9 +137,19 @@ console.log(reverseStrings(strs)) // returns...
 // ]
 
 
-function reverseStrings(strings) {
-    strings.forEach(string => {
-         string.str = string.str.split('').reverse().join('')
-        });
-        return strings;
-}
+// function reverseStrings(strings) {
+//     strings.forEach(string => {
+//          string.str = string.str.split('').reverse().join('')
+//         });
+//         return strings;
+// }
+
+
+let num1 = [1, 3, 5, 9, 9];
+let num2 = [9, 9, 9, 18];
+
+let isNine = (num) => num !== 9;
+
+let remove9s = (input) =>  input.filter(isNine);
+console.log(remove9s(num1));
+console.log(remove9s(num2));
