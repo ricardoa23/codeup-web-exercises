@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("This happened First!");
+
+      function getUsers() {
+        fetch("https://api.github.com/users")
+          .then((reposnse) => {
+            return response.json();
+          })
+          .then((data) => {
+            console.log("The Fetch is Complete!");
+            // console.log(data)
+          })
+          .catch((error) => {
+            alert(error);
+          });
+      }
+      async function getUsersAsync() {
+        try {
+          let response = await fetch("https://api.github.com/users");
+          let data = await response.json();
+          return data;
+        } catch (error) {}
+      }
+
+      //iffe arrow async function
+      (async () => {
+        let users;
+        let repos;
+        try {
+          users = await getUsers();
+          repos = await getRepos();
+        } 
+        catch (error) {
+
+        }
+      })();
+    </script>
+  </body>
+</html>
